@@ -10,4 +10,5 @@ class TypeProductController extends Controller
     public function showTypeProduct(){
         return view('admin.adminindextotal.TypeProduct.TypeProductfrom');
     }
+
 }

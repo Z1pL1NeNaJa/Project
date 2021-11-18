@@ -53,6 +53,7 @@ Route::get('/adddataadmin','Admin\AdddataadminController@showaddadmin')->name('a
 Route::get('/adddataadminb','Admin\AdddataadminbController@showaddadmin')->name('adddataadminb');
 //route addadmint
 Route::get('/adddataadmint','Admin\AdddataadmintController@showaddadmin')->name('adddataadmint');
+Route::post('/adddataadmint/create','Admin\AdddataadmintController@create')->name('Createadddataadmint');
 //route addadminp
 Route::get('/adddataadminp','Admin\AdddataadminpController@showaddadmin')->name('adddataadminp');
 //route addadminc
