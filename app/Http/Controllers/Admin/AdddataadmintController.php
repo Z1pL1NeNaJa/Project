@@ -10,8 +10,8 @@ class AdddataadmintController extends Controller
 {
     public function showaddadmin()
     {
-        $category = Category::all();
-        return view('admin.addadmintotal.adddataadmint.adddataadmint',compact('Catrgory'));
+        $Categorys = Category::all();
+        return view('admin.addadmintotal.adddataadmint.adddataadmint',compact('Categorys'));
     }
 
     public function create(Request $request){
