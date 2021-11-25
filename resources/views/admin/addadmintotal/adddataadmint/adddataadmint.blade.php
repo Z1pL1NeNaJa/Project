@@ -22,21 +22,15 @@
                                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                         <h6 class="m-0 font-semibold text-gray-700 dark:text-gray-200">เพิ่มข้อมูลหน้า TYPEPRODUCT</h6>
                                     </div>
-                                    <div class="">
-                                        <form>
-                                            <div class="form-group">
-                                                <label class="block text-sm">
-                                                    <span class="text-gray-700 dark:text-gray-400">ID</span>
-                                                    <input class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="กรอกข้อมูล" name="name"/>
-                                                </label>
-                                            </div>
-
                                             <div class="form-group">
                                                 <div class="form-group">
                                                     <label class="block text-sm">
                                                         <span class="text-gray-700 dark:text-gray-400">MENUNAME</span>
-                                                        <input class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="กรอกข้อมูล" />
+                                                        <input class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="กรอกข้อมูล" name="name"/>
                                                     </label>
+                                                    @error('name')
+                                                    <span class="dark:text-gray-200">{{$message}}</span>
+                                                    @enderror
                                                 </div>
                                             </div>
 

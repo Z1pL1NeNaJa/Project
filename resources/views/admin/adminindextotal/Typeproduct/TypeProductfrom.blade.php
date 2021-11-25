@@ -28,6 +28,7 @@
                   </tr>
                 </thead>
                 <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
+                  @foreach ($Catrgory as $categories)
                   <tr class="text-gray-700 dark:text-gray-400">
                     <td class="px-4 py-3">
                       <div class="flex items-center text-sm">
@@ -37,20 +38,20 @@
                           <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
                         </div>
                         <div>
-                          <p class="font-semibold">TY001</p>
+                          <p class="font-semibold">{{$categories->Category_id}}</p>
 
                         </div>
                       </div>
                     </td>
-                    <td class="px-4 py-3 text-sm">
-                      ชิ้นส่วนหมู
-                    </td>
+                    <td class="px-4 py-3 text-sm">{{$categories->name}}</td>
                     <td>
                       <a href="{{route('editadmintfrom')}}" class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-blue-600 border border-transparent rounded-lg active:bg-blue-600 hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue">EDIT</a>
                       <button @click="openModal" class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-red-600 border border-transparent rounded-lg active:bg-red-600 hover:bg-red-700 focus:outline-none focus:shadow-outline-red">
                         DELETE
                       </button>
+
             </div>
+            @endforeach
           </div>
       </main>
     </div>
