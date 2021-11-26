@@ -11,7 +11,7 @@
                     <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
                         หน้า TYPEPRODUCT
                     </h2>
-                    <form action="{{route('create')}}" method="POST">
+                    <form action="{{url('/TypeProductfrom/update/'.$category->category_id)}}" method="POST">
                         {{csrf_field()}}
                         <!-- Cards -->
                         <div class="container-fluid" id="container-wrapper">
@@ -26,7 +26,7 @@
                                             <div class="form-group">
                                                 <label class="block text-sm">
                                                     <span class="text-gray-700 dark:text-gray-400">MENUNAME</span>
-                                                    <input class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="กรอกข้อมูล" name="name" />
+                                                    <input class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" value="{{$category->name}}" name="name" />
                                                 </label>
                                                 @error('name')
                                                 <span class="dark:text-gray-200">{{$message}}</span>
@@ -35,7 +35,7 @@
                                         </div>
 
                                         <button @click="openModal" class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-red-600 border border-transparent rounded-lg active:bg-red-600 hover:bg-red-700 focus:outline-none focus:shadow-outline-red">
-                                            SUBMIT
+                                            UPDATE
                                         </button>
                                         <!-- Modal backdrop. This what you want to place close to the closing body tag -->
                                         <div x-show="isModalOpen" x-transition:enter="transition ease-out duration-150" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="fixed inset-0 z-30 flex items-end bg-black bg-opacity-50 sm:items-center sm:justify-center">

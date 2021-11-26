@@ -39,8 +39,15 @@ Route::get('/Backgroundfrom', 'Admin\BackgroundController@showBackground')->name
 Route::get('/TypeProductfrom', 'Admin\TypeProductController@showTypeProduct')->name('TypeProductfrom');
 Route::post('/TypeProductfrom/create', 'Admin\TypeProductController@create')->name('create');
 Route::get('/TypeProductfrom/edit/{id}', 'Admin\TypeProductController@edit');
+Route::post('/TypeProductfrom/update/{id}', 'Admin\TypeProductController@update');
+Route::get('/TypeProductfrom/delete/{id}', 'Admin\TypeProductController@delete');
 //route Product
 Route::get('/productfrom', 'Admin\ProductController@showproduct')->name('productfrom');
+Route::post('/productfrom/create', 'Admin\ProductController@create')->name('product.c');
+Route::get('/productfrom/edit/{id}', 'Admin\ProductController@edit');
+Route::post('/productfrom/update/{id}', 'Admin\ProductController@update');
+Route::get('/productfrom/delete/{id}', 'Admin\ProductController@delete');
+
 //route Contents
 Route::get('/contentsfrom', 'Admin\contentsController@showcontents')->name('contentsfrom');
 //route Homepagefrom
