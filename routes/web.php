@@ -30,52 +30,53 @@ Route::get('/contact', function () {
 });
 
 //route Dashboard
-Route::get('/index','Admin\AdminController@index')->name('index');
+Route::get('/index', 'Admin\AdminController@index')->name('index');
 //route admin
-Route::get('/adminfrom','Admin\AdminindexController@showadmin')->name('adminfrom');
+Route::get('/adminfrom', 'Admin\AdminindexController@showadmin')->name('adminfrom');
 //route Background
-Route::get('/Backgroundfrom','Admin\BackgroundController@showBackground')->name('Backgroundfrom');
+Route::get('/Backgroundfrom', 'Admin\BackgroundController@showBackground')->name('Backgroundfrom');
 //route TypeProduct
-Route::get('/TypeProductfrom','Admin\TypeProductController@showTypeProduct')->name('TypeProductfrom');
+Route::get('/TypeProductfrom', 'Admin\TypeProductController@showTypeProduct')->name('TypeProductfrom');
+Route::post('/TypeProductfrom/create', 'Admin\TypeProductController@create')->name('create');
+Route::get('/TypeProductfrom/edit/{id}', 'Admin\TypeProductController@edit');
 //route Product
-Route::get('/productfrom','Admin\ProductController@showproduct')->name('productfrom');
+Route::get('/productfrom', 'Admin\ProductController@showproduct')->name('productfrom');
 //route Contents
-Route::get('/contentsfrom','Admin\contentsController@showcontents')->name('contentsfrom');
+Route::get('/contentsfrom', 'Admin\contentsController@showcontents')->name('contentsfrom');
 //route Homepagefrom
-Route::get('/homepagefrom','Admin\HomepageController@showhomepage')->name('homepagefrom');
+Route::get('/homepagefrom', 'Admin\HomepageController@showhomepage')->name('homepagefrom');
 //------------------------------------------------------------------------------------------------------------------------------------
 
 // Zone Admin ADD
 
 //route addadmin
-Route::get('/adddataadmin','Admin\AdddataadminController@showaddadmin')->name('adddataadmin');
+Route::get('/adddataadmin', 'Admin\AdddataadminController@showaddadmin')->name('adddataadmin');
 //route addadminb
-Route::get('/adddataadminb','Admin\AdddataadminbController@showaddadmin')->name('adddataadminb');
+Route::get('/adddataadminb', 'Admin\AdddataadminbController@showaddadmin')->name('adddataadminb');
 //route addadmint
-Route::get('/adddataadmint','Admin\AdddataadmintController@showaddadmin')->name('adddataadmint');
-Route::post('/adddataadmint/create','Admin\AdddataadmintController@create')->name('Createadddataadmint');
+Route::get('/adddataadmint', 'Admin\AdddataadmintController@showaddadmin')->name('adddataadmint');
 //route addadminp
-Route::get('/adddataadminp','Admin\AdddataadminpController@showaddadmin')->name('adddataadminp');
+Route::get('/adddataadminp', 'Admin\AdddataadminpController@showaddadmin')->name('adddataadminp');
 //route addadminc
-Route::get('/adddataadminc','Admin\AdddataadmincController@showaddadmin')->name('adddataadminc');
+Route::get('/adddataadminc', 'Admin\AdddataadmincController@showaddadmin')->name('adddataadminc');
 //route addadminh
-Route::get('/adddataadminh','Admin\AdddataadminhController@showaddadmin')->name('adddataadminh');
+Route::get('/adddataadminh', 'Admin\AdddataadminhController@showaddadmin')->name('adddataadminh');
 //------------------------------------------------------------------------------------------------------------------------------------
 
 // Zone Admin Edit
 
 //route Editadmin
-Route::get('/editadminfrom','Admin\EditadminController@showaddadmin')->name('editadminfrom');
+Route::get('/editadminfrom', 'Admin\EditadminController@showaddadmin')->name('editadminfrom');
 //route Editadminb
-Route::get('/editadminbfrom','Admin\EditadminbController@showaddadmin')->name('editadminbfrom');
+Route::get('/editadminbfrom', 'Admin\EditadminbController@showaddadmin')->name('editadminbfrom');
 //route Editadmint
-Route::get('/editadmintfrom','Admin\EditadmintController@showaddadmin')->name('editadmintfrom');
+Route::get('/editadmintfrom', 'Admin\EditadmintController@showaddadmin')->name('editadmintfrom');
 //route Editadminp
-Route::get('/editadminpfrom','Admin\EditadminpController@showaddadmin')->name('editadminpfrom');
+Route::get('/editadminpfrom', 'Admin\EditadminpController@showaddadmin')->name('editadminpfrom');
 //route Editadminc
-Route::get('/editadmincfrom','Admin\EditadmincController@showaddadmin')->name('editadmincfrom');
+Route::get('/editadmincfrom', 'Admin\EditadmincController@showaddadmin')->name('editadmincfrom');
 //route Editadminh
-Route::get('/editadminhfrom','Admin\EditadminhController@showaddadmin')->name('editadminhfrom');
+Route::get('/editadminhfrom', 'Admin\EditadminhController@showaddadmin')->name('editadminhfrom');
 //------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -102,5 +103,3 @@ Route::get('/editadminhfrom','Admin\EditadminhController@showaddadmin')->name('e
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-
