@@ -23,11 +23,15 @@
                                     <tr class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
                                         <th class="px-4 py-3">ID</th>
                                         <th class="px-4 py-3">NAME</th>
+                                        <th class="px-4 py-3">PRODUCT COUNT</th>
+                                        <th class="px-4 py-3">CAREATOR</th>
                                         <th><a href="{{ route('adddataadmint') }}" class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100  focus:shadow-outline-blue">ADD
                                                 DATA</a></th>
 
                                     </tr>
                                 </thead>
+
+                                @if ($category->count()>0)
                                 <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
                                     @foreach ($category as $categories)
                                     <tr class="text-gray-700 dark:text-gray-400">
@@ -46,15 +50,21 @@
                                             </div>
                                         </td>
                                         <td class="px-4 py-3 text-sm">{{ $categories->name }}</td>
+                                        <td class="px-4 py-3 text-sm">{{ $categories->product->count()}}</td>
+                                        <td class="px-4 py-3 text-sm">{{ $categories->user->name }}</td>
                                         <td>
                                             <a href="{{ url('/TypeProductfrom/edit/' . $categories->category_id) }}" class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-blue-600 border border-transparent rounded-lg active:bg-blue-600 hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue">EDIT</a>
                                             <a href="{{url('/TypeProductfrom/delete/'.$categories->category_id)}}" class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-red-600 border border-transparent rounded-lg active:bg-red-600 hover:bg-red-700 focus:outline-none focus:shadow-outline-red">
                                                 DELETE
                                             </a>
-                                            @endforeach
+                                        </td>
+                                        @endforeach
+                                        @else
+                                            <div class="color:#fdf2f2">
+                                                <p>ไม่มีข้อมูลประเภทสินค้า</p>
+                                            </div>
+                                        @endif
                         </div>
-
-                    </div>
             </main>
         </div>
     </div>

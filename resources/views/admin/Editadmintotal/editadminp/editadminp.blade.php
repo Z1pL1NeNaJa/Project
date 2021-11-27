@@ -63,7 +63,17 @@
                                                     <span class="dark:text-gray-200">{{$message}}</span>
                                                     @enderror
                                                 </div>
-                                                <div class="form-group">
+                                                <div class="form-group"> 
+                                                    <span class="text-gray-700 dark:text-gray-400">
+                                                        TYPE
+                                                    </span>
+                                                    <select name="category" class="form-control block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-multiselect focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray" >
+                                                        @foreach ($categories as $category)
+                                                        <option value="{{$category->category_id}}" >{{$category->name}}</option>
+                                                        @endforeach
+                                                    </select>
+                                                </div>   
+                                                <!--<div class="form-group">
                                                     <label class="block text-sm">
                                                         <span class="text-gray-700 dark:text-gray-400">TYPE</span>
                                                         <input name="category" type="category" id="category" class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" value="{{$editproduct->category_id}}" />
@@ -71,7 +81,7 @@
                                                     @error('category')
                                                     <span class="dark:text-gray-200">{{$message}}</span>
                                                     @enderror
-                                                </div>
+                                                </div>-->
                                         </div>
                                         <button @click="openModal" class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-red-600 border border-transparent rounded-lg active:bg-red-600 hover:bg-red-700 focus:outline-none focus:shadow-outline-red">
                                             SUBMIT

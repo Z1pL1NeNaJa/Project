@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Category;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Product;
@@ -11,12 +12,17 @@ use File;
 
 class ProductController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware("VerifyIsCategory")->only(['showproduct','create']);
+    }
     public function showproduct(){
 
         $product = Product::all();
         return view('admin.adminindextotal.product.productfrom',compact('product'));
     }
-    public function create(Request $request){
+    public function create(Request $request)
+    {
         $validateDate = $request->validate([
             'name'=>'required',
             'description'=>'required',
@@ -55,7 +61,7 @@ class ProductController extends Controller
     }
     public function edit($id){
         $editproduct = Product::find($id);
-        return view('admin.Editadmintotal.editadminp.editadminp',compact('editproduct'));
+        return view('admin.Editadmintotal.editadminp.editadminp',compact('editproduct'))->with('categories',Category::all());
     }
     public function update(Request $request, $id){
         //dd($request);

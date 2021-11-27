@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Category;
+use Illuminate\Support\Facades\Auth;
+
 
 class TypeProductController extends Controller
 {
@@ -25,6 +27,7 @@ class TypeProductController extends Controller
         ]);
         $category = new Category;
         $category->name = $request->name;
+        $category->user_id = Auth::user()->id;
         $category->save();
         return redirect('/TypeProductfrom');
     }
@@ -48,8 +51,13 @@ class TypeProductController extends Controller
         return redirect('/TypeProductfrom');
     }
     public function delete($category_id){
+        $category = Category::find($category_id);
+        if($category->product->count()>0){
+            return redirect()->back()->with('error','ไม่สามารถลบประเภทสินค้าได้');
+        }
         Category::destroy($category_id);
         return redirect('/TypeProductfrom');
+        
     }
 }
 
