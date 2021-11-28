@@ -31,5 +31,8 @@
     </script>
     <script src="{{asset('admin/assets/js/charts-lines.js')}}" defer></script>
     <script src="{{asset('admin/assets/js/charts-pie.js')}}" defer></script>
+    <script src="{{asset('admin/assets/js/focus-trap.js')}}" defer></script>
+    <script src="{{asset('admin/assets/js/charts-bars.js')}}" defer></script>
+    <script src="{{asset('admin/assets/js/init-alpine.js')}}" defer></script>
   </head>
   

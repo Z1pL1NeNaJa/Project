@@ -31,7 +31,7 @@
                                                         <input name="name" type="name" id="name" class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="กรอกข้อมูล" />
                                                     </label>
                                                     @error('name')
-                                                    <span class="dark:text-gray-200">{{$message}}</span>
+                                                    <span class="font-semibold text-3xl text-red-600 dark:text-red-400">{{$message}}</span>
                                                     @enderror
                                                 </div>
                                                 <div class="form-group">
@@ -40,7 +40,7 @@
                                                         <input name="description" type="description" id="description" class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="กรอกข้อมูล" />
                                                     </label>
                                                     @error('description')
-                                                    <span class="dark:text-gray-200">{{$message}}</span>
+                                                    <span class="font-semibold text-3xl text-red-600 dark:text-red-400">{{$message}}</span>
                                                     @enderror
                                                 </div>
                                                 <div class="form-group">
@@ -49,7 +49,7 @@
                                                         <input name="image" class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" type="file" id="file" />
                                                     </label>
                                                     @error('image')
-                                                    <span class="dark:text-gray-200">{{$message}}</span>
+                                                    <span class="font-semibold text-3xl text-red-600 dark:text-red-400">{{$message}}</span>
                                                     @enderror
                                                 </div>
                                                 <div class="form-group">
@@ -58,7 +58,7 @@
                                                         <input name="price" type="price" id="price" class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="กรอกข้อมูล" />
                                                     </label>
                                                     @error('price')
-                                                    <span class="dark:text-gray-200">{{$message}}</span>
+                                                    <span class="font-semibold text-3xl text-red-600 dark:text-red-400">{{$message}}</span>
                                                     @enderror
                                                 </div>
                                                 <div class="form-group"> 

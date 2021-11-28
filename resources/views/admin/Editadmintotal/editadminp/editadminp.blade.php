@@ -31,7 +31,7 @@
                                                         <input name="name" type="name" id="name" class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" value="{{$editproduct->name}}" />
                                                     </label>
                                                     @error('name')
-                                                    <span class="dark:text-gray-200">{{$message}}</span>
+                                                    <span class="text-xs text-red-600 dark:text-red-400">{{$message}}</span>
                                                     @enderror
                                                 </div>
                                                 <div class="form-group">
@@ -40,7 +40,7 @@
                                                         <input name="description" type="description" id="description" class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" value="{{$editproduct->description}}" />
                                                     </label>
                                                     @error('description')
-                                                    <span class="dark:text-gray-200">{{$message}}</span>
+                                                    <span class="text-xs text-red-600 dark:text-red-400">{{$message}}</span>
                                                     @enderror
                                                 </div>
                                                 <div class="form-group">
@@ -51,7 +51,7 @@
                                                     </label>
                                                     <!--แสดงรูปภาพ-->
                                                     @error('image')
-                                                    <span class="dark:text-gray-200">{{$message}}</span>
+                                                    <span class="text-xs text-red-600 dark:text-red-400">{{$message}}</span>
                                                     @enderror
                                                 </div>
                                                 <div class="form-group">
@@ -60,7 +60,7 @@
                                                         <input name="price" type="price" id="price" class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" value="{{$editproduct->price}}" />
                                                     </label>
                                                     @error('price')
-                                                    <span class="dark:text-gray-200">{{$message}}</span>
+                                                    <span class="font-semibold text-3xl text-red-600 dark:text-red-400">{{$message}}</span>
                                                     @enderror
                                                 </div>
                                                 <div class="form-group"> 
@@ -84,7 +84,7 @@
                                                 </div>-->
                                         </div>
                                         <button @click="openModal" class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-red-600 border border-transparent rounded-lg active:bg-red-600 hover:bg-red-700 focus:outline-none focus:shadow-outline-red">
-                                            SUBMIT
+                                            UPDATE
                                         </button>
                                         <!-- Modal backdrop. This what you want to place close to the closing body tag -->
                                         <div x-show="isModalOpen" x-transition:enter="transition ease-out duration-150" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="fixed inset-0 z-30 flex items-end bg-black bg-opacity-50 sm:items-center sm:justify-center">
