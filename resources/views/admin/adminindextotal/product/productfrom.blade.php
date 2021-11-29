@@ -27,7 +27,7 @@
                     <th class="px-4 py-3">PICTURE</th>
                     <th class="px-4 py-3">PRICE</th>
                     <th class="px-4 py-3">TYPE</th>
-                    <th><a href="{{route('adddataadminp')}}" class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100  focus:shadow-outline-blue">ADD DATA</a></th>
+                    <th><a href="{{route('adddataadminp')}}" class="disabled:opacity-50 px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100  focus:shadow-outline-blue">ADD DATA</a></th>
                   </tr>
                 </thead>
                 <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">

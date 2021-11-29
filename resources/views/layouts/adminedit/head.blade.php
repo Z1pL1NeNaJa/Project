@@ -10,6 +10,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="{{asset('admin/assets/css/tailwind.output.css')}}" />
+    <link rel="stylesheet" href="{{asset('admin/assets/css/tailwind.css')}}" />
     <script
       src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
       defer
@@ -30,5 +31,8 @@
     </script>
     <script src="{{asset('admin/assets/js/charts-lines.js')}}" defer></script>
     <script src="{{asset('admin/assets/js/charts-pie.js')}}" defer></script>
+    <script src="{{asset('admin/assets/js/focus-trap.js')}}" defer></script>
+    <script src="{{asset('admin/assets/js/charts-bars.js')}}" defer></script>
+    <script src="{{asset('admin/assets/js/init-alpine.js')}}" defer></script>
   </head>
   

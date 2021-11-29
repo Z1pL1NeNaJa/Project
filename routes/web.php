@@ -28,11 +28,12 @@ Route::get('/services', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
-
 //route Dashboard
 Route::get('/index', 'Admin\AdminController@index')->name('index');
 //route admin
 Route::get('/adminfrom', 'Admin\AdminindexController@showadmin')->name('adminfrom');
+Route::post('/adminfrom/create', 'Admin\AdminindexController@create')->name('create');
+Route::get('/adminfrom/edit/{id}', 'Admin\AdminindexController@edit');
 //route Background
 Route::get('/Backgroundfrom', 'Admin\BackgroundController@showBackground')->name('Backgroundfrom');
 //route TypeProduct
@@ -84,29 +85,11 @@ Route::get('/editadminpfrom', 'Admin\EditadminpController@showaddadmin')->name('
 Route::get('/editadmincfrom', 'Admin\EditadmincController@showaddadmin')->name('editadmincfrom');
 //route Editadminh
 Route::get('/editadminhfrom', 'Admin\EditadminhController@showaddadmin')->name('editadminhfrom');
-//------------------------------------------------------------------------------------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 Auth::routes();
+
+Route::middleware(['auth','Veirfyisadmin'])->group(function(){
+    
+});
 
 Route::get('/home', 'HomeController@index')->name('home');
