@@ -40,6 +40,7 @@
                           <img class="object-cover w-full h-full rounded-full" src="{{asset('admin/assets/img/icon.png')}}" alt="" loading="lazy" />
                           <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
                         </div>
+
                         <div>
                           <p class="font-semibold">{{$products->id_product}}</p>
 
@@ -133,7 +134,6 @@
   </table>
   </div>
   </div>
-
   @include('layouts/admin/footer')
 
   </div>

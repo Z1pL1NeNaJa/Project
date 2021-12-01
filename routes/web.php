@@ -34,6 +34,7 @@ Route::get('/index', 'Admin\AdminController@index')->name('index');
 Route::get('/adminfrom', 'Admin\AdminindexController@showadmin')->name('adminfrom');
 Route::post('/adminfrom/create', 'Admin\AdminindexController@create')->name('create');
 Route::get('/adminfrom/edit/{id}', 'Admin\AdminindexController@edit');
+Route::post('/adminfrom/update/{id}', 'Admin\AdminindexController@update');
 //route Background
 Route::get('/Backgroundfrom', 'Admin\BackgroundController@showBackground')->name('Backgroundfrom');
 //route TypeProduct

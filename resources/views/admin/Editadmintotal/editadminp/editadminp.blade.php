@@ -24,7 +24,7 @@
                                                 แก้ไขข้อมูลหน้า PRODUCT</h6>
                                         </div>
                                         <div class="">
-                                            <form>
+                                            <form action="{{url('/productfrom/update/'.$editproduct->id_product)}}">
                                                 <div class="form-group">
                                                     <label class="block text-sm">
                                                         <span class="text-gray-700 dark:text-gray-400">NAME</span>
@@ -63,7 +63,7 @@
                                                     <span class="font-semibold text-3xl text-red-600 dark:text-red-400">{{$message}}</span>
                                                     @enderror
                                                 </div>
-                                                <div class="form-group"> 
+                                                <div class="form-group">
                                                     <span class="text-gray-700 dark:text-gray-400">
                                                         TYPE
                                                     </span>
@@ -72,7 +72,7 @@
                                                         <option value="{{$category->category_id}}" >{{$category->name}}</option>
                                                         @endforeach
                                                     </select>
-                                                </div>   
+                                                </div>
                                                 <!--<div class="form-group">
                                                     <label class="block text-sm">
                                                         <span class="text-gray-700 dark:text-gray-400">TYPE</span>

@@ -63,7 +63,7 @@ class ProductController extends Controller
         $editproduct = Product::find($id);
         return view('admin.Editadmintotal.editadminp.editadminp',compact('editproduct'))->with('categories',Category::all());
     }
-    public function update(Request $request, $id){
+    public function update(Request $request, $id_product){
         //dd($request);
         $validateDate = $request->validate([
             'name'=>'required',
@@ -83,14 +83,9 @@ class ProductController extends Controller
             'image.max'=> 'อัพโหลดได้ไม่เกิน 10 MB',
         ]
     );
-    $product = new Product();
-        $product->name = $request->name;
-        $product->description = $request->description;
-        $product->price = $request->price;
-        $product->category_id = $request->category;
 
         if($request->hasFile('image')){
-            $product = Product::find($id);
+            $product = Product::find($id_product);
             if($product->image != 'icon2.png'){
                 File::delete(public_path().'/admin/images/'.$product->image);
             }
@@ -103,11 +98,12 @@ class ProductController extends Controller
             $product->price = $request->price;
             $product->category_id = $request->category;
         }else{
+            $product = Product::find($id_product);
             $product->name = $request->name;
             $product->description = $request->description;
             $product->price = $request->price;
             $product->category_id = $request->category;
-    
+
         }
         $product->save();
         return redirect()->route('productfrom');
