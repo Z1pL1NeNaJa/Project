@@ -2,10 +2,15 @@
 
 @section('content')
 
-<div class="page-content page-container" id="page-content">
+
+<div class="container">
+
+
+
+<div class="page-content" id="page-content" >
     <div class="padding">
         <div class="row container d-flex justify-content-center">
-            <div class="col-xl-6 col-md-1ภ">
+            <div class="col-xl-8 col-md-1">
                 <div class="card user-card-full">
                     <div class="row m-l-0 m-r-0">
                         <div class="col-sm-4 bg-c-lite-green user-profile">
@@ -21,7 +26,7 @@
                                     <div class="col-sm-6">
                                         <p><strong>Name :</strong> {{ Auth::user()->name }}</p>
                                     </div>
-                                    <div class="col-sm-10">
+                                    <div class="col-sm-12">
                                         <p><strong>Email :</strong> {{ Auth::user()->email }}</p>
                                     </div>
                                 </div>
@@ -44,6 +49,10 @@
             </div>
         </div>
     </div>
+</div> 
+
+
+    
 </div>
 
 @endsection
