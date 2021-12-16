@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Background extends Migration
+class CreateBackgroundTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,12 @@ class Background extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('background', function (Blueprint $table) {
+            $table->id('background_id');
+            $table->string('name',200);
+            $table->string('image');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +28,6 @@ class Background extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('background');
     }
 }

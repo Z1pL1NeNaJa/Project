@@ -49,9 +49,9 @@
                                                 </div>
                                             </div>
                                         </td>
-                                        <td class="px-4 py-3 text-sm">{{ $categories->name }}</td>
+                                        <td class="px-4 py-3 text-sm">{{ $categories->name}}</td>
                                         <td class="px-4 py-3 text-sm">{{ $categories->product->count()}}</td>
-                                        <td class="px-4 py-3 text-sm">{{ $categories->user->name }}</td>
+                                        <td class="px-4 py-3 text-sm">{{ $categories->user->name}}</td>
                                         <td class="px-4 py-3">
                                             <div class="flex items-center space-x-4 text-sm">
                                                 <a href="{{ url('/TypeProductfrom/edit/' . $categories->category_id) }}" class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg focus:outline-none focus:shadow-outline-gray" aria-label="Edit">

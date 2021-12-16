@@ -31,28 +31,28 @@ Route::get('/index', 'Admin\AdminController@index')->name('index');
 //route admin
 Route::get('/adminfrom', 'Admin\AdminindexController@showadmin')->name('adminfrom');
 Route::get('/adddataadmin', 'Admin\AdddataadminController@showaddadmin')->name('adddataadmin');
-Route::post('/adminfrom/create', 'Admin\AdminindexController@create')->name('create');
+Route::post('/adminfrom/create', 'Admin\AdminindexController@create')->name('create.a');
 Route::get('/adminfrom/edit/{id}', 'Admin\AdminindexController@edit');
 Route::post('/adminfrom/update/{id}', 'Admin\AdminindexController@update');
 
 //route Background
 Route::get('/Backgroundfrom', 'Admin\BackgroundController@showBackground')->name('Backgroundfrom');
 Route::get('/adddataadminb', 'Admin\AdddataadminbController@showaddadmin')->name('adddataadminb');
-Route::post('/Backgroundfrom/create', 'Admin\BackgroundController@create')->name('create');
-//Route::get('/adminfrom/edit/{id}', 'Admin\AdminindexController@edit');
-//Route::post('/adminfrom/update/{id}', 'Admin\AdminindexController@update');
+Route::post('/Backgroundfrom/create', 'Admin\BackgroundController@create')->name('create.b');
+//Route::get('/Backgroundfrom/edit/{id}', 'Admin\AdminindexController@edit');
+//Route::post('/Backgroundfrom/update/{id}', 'Admin\AdminindexController@update');
 
 //route TypeProduct
 Route::get('/TypeProductfrom', 'Admin\TypeProductController@showTypeProduct')->name('TypeProductfrom');
 Route::get('/adddataadmint', 'Admin\AdddataadmintController@showaddadmin')->name('adddataadmint');
-Route::post('/TypeProductfrom/create', 'Admin\TypeProductController@create')->name('create');
+Route::post('/TypeProductfrom/create', 'Admin\TypeProductController@create')->name('create.t');
 Route::get('/TypeProductfrom/edit/{id}', 'Admin\TypeProductController@edit');
 Route::post('/TypeProductfrom/update/{id}', 'Admin\TypeProductController@update');
 Route::get('/TypeProductfrom/delete/{id}', 'Admin\TypeProductController@delete');
 
 //route Product
 Route::get('/productfrom', 'Admin\ProductController@showproduct')->name('productfrom');
-Route::get('/adddataadminp', 'Admin\AdddataadminpController@showaddadmin')->name('adddataadminp');
+Route::get('/adddataadminp', 'Admin\ProductController@showaddadmin')->name('adddataadminp');
 Route::post('/productfrom/create', 'Admin\ProductController@create')->name('product.c');
 Route::get('/productfrom/edit/{id}', 'Admin\ProductController@edit');
 Route::post('/productfrom/update/{id}', 'Admin\ProductController@update');

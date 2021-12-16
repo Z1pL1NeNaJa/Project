@@ -11,7 +11,7 @@
                     <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
                         หน้า TYPEPRODUCT
                     </h2>
-                    <form action="{{route('create')}}" method="POST">
+                    <form action="{{route('create.t')}}" method="POST">
             {{csrf_field()}}
                     <!-- Cards -->
                     <div class="container-fluid" id="container-wrapper">
