@@ -37,7 +37,7 @@ Route::post('/adminfrom/update/{id}', 'Admin\AdminindexController@update');
 
 //route Background
 Route::get('/Backgroundfrom', 'Admin\BackgroundController@showBackground')->name('Backgroundfrom');
-Route::get('/adddataadminb', 'Admin\AdddataadminbController@showaddadmin')->name('adddataadminb');
+Route::get('/adddataadminb', 'Admin\BackgroundController@showaddadminb')->name('adddataadminb');
 Route::post('/Backgroundfrom/create', 'Admin\BackgroundController@create')->name('create.b');
 //Route::get('/Backgroundfrom/edit/{id}', 'Admin\AdminindexController@edit');
 //Route::post('/Backgroundfrom/update/{id}', 'Admin\AdminindexController@update');

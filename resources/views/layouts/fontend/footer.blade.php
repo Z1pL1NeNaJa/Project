@@ -18,7 +18,7 @@
       <div class="col-lg-2 col-md-6 footer-links">
         <h4>ธวัชค้าหมู</h4>
         <ul>
-          <li><i class="bx bx-chevron-right"></i> <a href="{{asset('welcome')}}">หน้าแรก</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="{{asset('/')}}">หน้าแรก</a></li>
           <li><i class="bx bx-chevron-right"></i> <a href="{{asset('about')}}">สินค้า</a></li>
           <li><i class="bx bx-chevron-right"></i> <a href="{{asset('services')}}">เกี่ยวกับ</a></li>
           <li><i class="bx bx-chevron-right"></i> <a href="{{asset('contact')}}">ติดต่อเรา</a></li>

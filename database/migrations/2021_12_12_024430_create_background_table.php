@@ -14,9 +14,10 @@ class CreateBackgroundTable extends Migration
     public function up()
     {
         Schema::create('background', function (Blueprint $table) {
-            $table->id('background_id');
+            $table->bigIncrements('background_id');
             $table->string('name',200);
             $table->string('image');
+            $table->bigInteger('user_id');
             $table->timestamps();
         });
     }

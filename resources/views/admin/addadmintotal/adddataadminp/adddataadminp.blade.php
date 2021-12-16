@@ -66,8 +66,8 @@
                                                         TYPE
                                                     </span>
                                                     <select name="category" class="form-control block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-multiselect focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray" >
-                                                        @foreach ($categories as $category)
-                                                        <option >{{$category->name}}</option>
+                                                        @foreach ($categories as $rows)
+                                                        <option value="{{$rows->category_id}}" >{{$rows->name}}</option>
                                                         @endforeach
                                                     </select>
                                                 </div>    
