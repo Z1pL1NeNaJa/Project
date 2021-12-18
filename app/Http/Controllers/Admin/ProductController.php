@@ -21,7 +21,7 @@ class ProductController extends Controller
         $product = Product::all();
         return view('admin.adminindextotal.product.productfrom',compact('product'));
     }
-    public function showaddadmin()
+    public function showaddadminp()
     {
         return view('admin.addadmintotal.adddataadminp.adddataadminp')->with('categories',Category::all());
     }

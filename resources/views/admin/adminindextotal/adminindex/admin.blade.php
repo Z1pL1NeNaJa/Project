@@ -25,8 +25,9 @@
                     <th class="px-4 py-3">NAME</th>
                     <th class="px-4 py-3">EMAIL</th>
                     <th class="px-4 py-3">ADDRESS</th>
+                    <th class="px-4 py-3">ADMIN</th>
                     <th class="px-4 py-3">PHONE</th>
-                    <th><a href="{{asset('adddataadmin')}}" class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100  focus:shadow-outline-blue">ADD DATA</a></th>
+                    <!-- <th><a href="{{asset('adddataadmin')}}" class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100  focus:shadow-outline-blue">ADD DATA</a></th> -->
 
                   </tr>
                 </thead>
@@ -55,6 +56,9 @@
                     </td>
                     <td class="px-4 py-3 text-xs">
                       {{$user->address}}
+                    </td>
+                    <td class="px-4 py-3 text-xs">
+                      {{$user->isAdmin}}
                     </td>
                     <td class="px-4 py-3 text-xs">
                       {{$user->phone}}

@@ -13,35 +13,59 @@
           <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
             หน้า ADMIN
           </h2>
-          <!-- Cards -->
-          <div class="card mb-4">
-            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-              <h6 class="m-0 font-semibold text-gray-700 dark:text-gray-200">แก้ไขข้อมูลหน้า Admin</h6>
-            </div>
-            <div class="">
-              <form>
-                <div class="form-group">
-                  <label class="block text-sm">
-                    <span class="text-gray-700 dark:text-gray-400">ID</span>
-                    <input class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="กรอกข้อมูล" />
-                  </label>
+          <form action="{{url('/adminfrom/update/'.$users->id)}}" method="POST">
+            @csrf
+            <!-- Cards -->
+            <div class="card mb-4">
+              <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                <h6 class="m-0 font-semibold text-gray-700 dark:text-gray-200">แก้ไขข้อมูลหน้า Admin</h6>
+              </div>
+              <div class="">
+                <form>
                   <div class="form-group">
                     <label class="block text-sm">
                       <span class="text-gray-700 dark:text-gray-400">NAME</span>
-                      <input class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="กรอกข้อมูล" />
+                      <input name="name" type="name" id="name" class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" value="{{$users->name}}" />
                     </label>
-                  </div>
-                  <div class="form-group">
-                    <label class="block text-sm">
-                      <span class="text-gray-700 dark:text-gray-400">PASSWORD</span>
-                      <input class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="กรอกข้อมูล" />
-                    </label>
+                    @error('name')
+                    <span class="dark:text-gray-200">{{$message}}</span>
+                    @enderror
                   </div>
                   <div class="form-group">
                     <label class="block text-sm">
                       <span class="text-gray-700 dark:text-gray-400">EMAIL</span>
-                      <input class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="กรอกข้อมูล" />
+                      <input name="email" type="email" id="email" class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" value="{{$users->email}}" />
                     </label>
+                    @error('email')
+                    <span class="dark:text-gray-200">{{$message}}</span>
+                    @enderror
+                  </div>
+                  <div class="form-group">
+                    <label class="block text-sm">
+                      <span class="text-gray-700 dark:text-gray-400">ADDRESS</span>
+                      <input name="address" type="address" id="address" class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" value="{{$users->address}}" />
+                    </label>
+                    @error('address')
+                    <span class="dark:text-gray-200">{{$message}}</span>
+                    @enderror
+                  </div>
+                  <div class="form-group">
+                    <label class="block text-sm">
+                      <span class="text-gray-700 dark:text-gray-400">ADMIN</span>
+                      <input name="isAdmin" type="isAdmin" id="isAdmin" class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" value="{{$users->isAdmin}}" />
+                    </label>
+                    @error('isAdmin')
+                    <span class="dark:text-gray-200">{{$message}}</span>
+                    @enderror
+                  </div>
+                  <div class="form-group">
+                    <label class="block text-sm">
+                      <span class="text-gray-700 dark:text-gray-400">PHONE</span>
+                      <input name="phone" type="phone" id="phone" class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" value="{{$users->phone}}" />
+                    </label>
+                    @error('phone')
+                    <span class="dark:text-gray-200">{{$message}}</span>
+                    @enderror
                   </div>
 
                   <button @click="openModal" class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-red-600 border border-transparent rounded-lg active:bg-red-600 hover:bg-red-700 focus:outline-none focus:shadow-outline-red">
@@ -78,10 +102,10 @@
                     </div>
                   </div>
                   <a href="{{asset('adminfrom')}}" class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-blue-600 border border-transparent rounded-lg active:bg-blue-600 hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue">BACK</a>
-              </form>
+                </form>
+              </div>
             </div>
-          </div>
-          @include('layouts/adminedit/footer')
+            @include('layouts/adminedit/footer')
 
         </div>
     </div>

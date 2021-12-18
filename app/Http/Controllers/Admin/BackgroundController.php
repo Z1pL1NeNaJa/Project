@@ -85,7 +85,12 @@ class BackgroundController extends Controller
             $background = background::find($background_id);
             $background->name = $request->name;
         }
-        $product->save();
+        $background->save();
         return redirect()->route('Backgroundfrom');
+    }
+    public function delete($background_id)
+    {
+        background::destroy($background_id);
+        return redirect('Backgroundfrom');
     }
 }
