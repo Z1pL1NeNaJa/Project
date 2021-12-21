@@ -50,7 +50,7 @@
                                             </div>
                                         </td>
                                         <td class="px-4 py-3 text-sm">{{ $categories->name}}</td>
-                                        <td class="px-4 py-3 text-sm">{{ $categories->product->count()}}</td>
+                                        <td class="px-4 py-3 text-sm">{{ $categories->product->count()}} ชิ้น</td>
                                         <td class="px-4 py-3 text-sm">{{ $categories->user->name}}</td>
                                         <td class="px-4 py-3">
                                             <div class="flex items-center space-x-4 text-sm">

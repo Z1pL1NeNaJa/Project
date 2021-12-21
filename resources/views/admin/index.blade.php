@@ -27,9 +27,11 @@
                 <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">
                   User
                 </p>
+                @foreach ($users as $user )
                 <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">
-                  1
+                  {{$user->count()}}
                 </p>
+                @endforeach
               </div>
             </div>
             <!-- Card -->
@@ -43,9 +45,11 @@
                 <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">
                   Product
                 </p>
+                @foreach ($category as $categories )
                 <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">
-                  3
+                  {{ $categories->product->count()}}
                 </p>
+                @endforeach
               </div>
             </div>
             <!-- Card -->
@@ -59,8 +63,9 @@
                 <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">
                   TypeProduct
                 </p>
+
                 <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">
-                  3
+                  1
                 </p>
               </div>
             </div>

@@ -13,26 +13,34 @@ class AdminindexController extends Controller
         $users = User::all();
         return view('admin.adminindextotal.adminindex.admin', compact('users'));
     }
-    public function edit($id){
+    public function edit($id)
+    {
         $users = User::find($id);
-        return view('admin.Editadmintotal.editadmin.editadmin',compact('users'));
+        return view('admin.Editadmintotal.editadmin.editadmin', compact('users'));
     }
-    public function update(Request $request,$id){
-        $validated = $request->validate([
-            'name' => 'required|max:255',
-            'email' => 'required',
-            'address'=> 'required',
-            'isAdmin'=> 'required',
-            'phone'=> 'required',
-        ],
-        [
-            'email.required'=> 'กรุณาป้อนEmail',
-            'address.required'=> 'กรุณาป้อนที่อยู่',
-            'phone.required'=> 'กรุณาป้อนเบอร์โทรศัพท์',
-            'isAdmin.required'=>'กำหนดแอดมิน',
-            'name.required' => 'กรุณาป้อนชื่อแอดมินก่อน',
-            'name.max'=> 'กรอกข้อมูลได้สูงสุด 255 ตัวอักษร'
-        ]);
+    public function showaddadmin()
+    {
+        return view('admin.addadmintotal.adddataadmin.adddataadmin');
+    }
+    public function update(Request $request, $id)
+    {
+        $validated = $request->validate(
+            [
+                'name' => 'required|max:255',
+                'email' => 'required',
+                'address' => 'required',
+                'isAdmin' => 'required',
+                'phone' => 'required',
+            ],
+            [
+                'email.required' => 'กรุณาป้อนEmail',
+                'address.required' => 'กรุณาป้อนที่อยู่',
+                'phone.required' => 'กรุณาป้อนเบอร์โทรศัพท์',
+                'isAdmin.required' => 'กำหนดแอดมิน',
+                'name.required' => 'กรุณาป้อนชื่อแอดมินก่อน',
+                'name.max' => 'กรอกข้อมูลได้สูงสุด 255 ตัวอักษร'
+            ]
+        );
         $users = User::find($id);
         $users->name = $request->name;
         $users->email = $request->email;

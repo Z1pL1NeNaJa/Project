@@ -60,7 +60,7 @@
                     </td>
                     <td class="px-4 py-3 text-xs">
                       <span class="">
-                        {{$products->price}}
+                        $ {{$products->price}} บาท
                       </span>
                     </td>
                     <td class="px-4 py-3 text-xs">

@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/about','about@showproduct')->name('about');
+Route::get('/about', 'about@showproduct')->name('about');
 
 Route::get('/services', function () {
     return view('services');
@@ -25,12 +25,15 @@ Route::get('/services', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+Auth::routes();
+
+
 //route Dashboard
 Route::get('/index', 'Admin\AdminController@index')->name('index');
 
 //route admin
 Route::get('/adminfrom', 'Admin\AdminindexController@showadmin')->name('adminfrom');
-Route::get('/adddataadmin', 'Admin\AdddataadminController@showaddadmin')->name('adddataadmin');
+Route::get('/adddataadmin', 'Admin\AdminindexController@showaddadmin')->name('adddataadmin');
 // Route::post('/adminfrom/create', 'Admin\AdminindexController@create')->name('create.a');
 Route::get('/adminfrom/edit/{id}', 'Admin\AdminindexController@edit');
 Route::post('/adminfrom/update/{id}', 'Admin\AdminindexController@update');
@@ -46,7 +49,7 @@ Route::get('/Backgroundfrom/delete/{id}', 'Admin\BackgroundController@delete');
 
 //route TypeProduct
 Route::get('/TypeProductfrom', 'Admin\TypeProductController@showTypeProduct')->name('TypeProductfrom');
-Route::get('/adddataadmint', 'Admin\AdddataadmintController@showaddadmint')->name('adddataadmint');
+Route::get('/adddataadmint', 'Admin\TypeProductController@showaddadmint')->name('adddataadmint');
 Route::post('/TypeProductfrom/create', 'Admin\TypeProductController@create')->name('create.t');
 Route::get('/TypeProductfrom/edit/{id}', 'Admin\TypeProductController@edit');
 Route::post('/TypeProductfrom/update/{id}', 'Admin\TypeProductController@update');
@@ -62,31 +65,27 @@ Route::get('/productfrom/delete/{id}', 'Admin\ProductController@delete');
 
 //route Contents
 Route::get('/contentsfrom', 'Admin\contentsController@showcontents')->name('contentsfrom');
+Route::get('/adddataadminc', 'Admin\contentsController@showaddadmin')->name('adddataadminc');
+Route::post('/contentsfrom/create', 'Admin\contentsController@create')->name('contents.c');
+Route::get('/contentsfrom/edit/{id}', 'Admin\contentsController@edit');
+Route::post('/contentsfrom/update/{id}', 'Admin\contentsController@update');
+Route::get('/contentsfrom/delete/{id}', 'Admin\contentsController@delete');
+
+
+
 //route Homepagefrom
 Route::get('/homepagefrom', 'Admin\HomepageController@showhomepage')->name('homepagefrom');
+Route::get('/adddataadminh', 'Admin\HomepageController@showaddadmin')->name('adddataadminh');
+Route::post('/homepagefrom/create', 'Admin\HomepageController@create')->name('homepage.c');
+Route::get('/homepagefrom/edit/{id}', 'Admin\HomepageController@edit');
+Route::post('/homepagefrom/update/{id}', 'Admin\HomepageController@update');
+Route::get('/homepagefrom/delete/{id}', 'Admin\HomepageController@delete');
 //------------------------------------------------------------------------------------------------------------------------------------
 
-// Zone Admin ADD
 
-//route addadminc
-Route::get('/adddataadminc', 'Admin\AdddataadmincController@showaddadmin')->name('adddataadminc');
-//route addadminh
-Route::get('/adddataadminh', 'Admin\AdddataadminhController@showaddadmin')->name('adddataadminh');
-//------------------------------------------------------------------------------------------------------------------------------------
 
-// Zone Admin Edit
 
-//route Editadminb
-Route::get('/editadminbfrom', 'Admin\EditadminbController@showaddadmin')->name('editadminbfrom');
-//route Editadminc
-Route::get('/editadmincfrom', 'Admin\EditadmincController@showaddadmin')->name('editadmincfrom');
-//route Editadminh
-Route::get('/editadminhfrom', 'Admin\EditadminhController@showaddadmin')->name('editadminhfrom');
-
-Auth::routes();
-
-Route::middleware(['auth','Veirfyisadmin'])->group(function(){
-    
-});
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::middleware(['auth', 'Veirfyisadmin'])->group(function () {
+});

@@ -21,7 +21,6 @@
                                 <h6 class="m-0 font-semibold text-gray-700 dark:text-gray-200">เพิ่มข้อมูลหน้า BACKGOUND
                                 </h6>
                             </div>
-                            <div class="">
                                     <div class="form-group">
                                         <label class="block text-sm">
                                             <span class="text-gray-700 dark:text-gray-400">NAME</span>

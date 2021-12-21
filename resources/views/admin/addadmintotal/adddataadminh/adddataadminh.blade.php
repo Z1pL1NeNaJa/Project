@@ -9,61 +9,56 @@
             <main class="h-full overflow-y-auto">
                 <div class="container px-6 mx-auto grid">
                     <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
-                        หน้า HOMEPAGE
+                        หน้า PROMOTION
                     </h2>
-                    <div class="container-fluid" id="container-wrapper">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <!-- Form Basic -->
-                                <div class="card mb-4">
-                                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                        <h6 class="m-0 font-semibold text-gray-700 dark:text-gray-200">เพิ่มข้อมูลหน้า HOMEPAGE</h6>
-                                    </div>
-                                    <div class="">
+                    <form action="{{ route('homepage.c') }}" enctype="multipart/form-data" method="POST">
+                        @csrf
+                        <div class="container-fluid" id="container-wrapper">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <!-- Form Basic -->
+                                    <div class="card mb-4">
+                                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                            <h6 class="m-0 font-semibold text-gray-700 dark:text-gray-200">เพิ่มข้อมูลหน้า PROMOTION</h6>
+                                        </div>
                                         <form>
                                             <div class="form-group">
                                                 <label class="block text-sm">
-                                                    <span class="text-gray-700 dark:text-gray-400">ID</span>
-                                                    <input class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="กรอกข้อมูล" />
+                                                    <span class="text-gray-700 dark:text-gray-400">INFORMATION</span>
+                                                    <input type="text" name="information" id="information" class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="กรอกข้อมูล" />
                                                 </label>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="block text-sm">
-                                                    <span class="text-gray-700 dark:text-gray-400">แบบทดสอบข้อมูล</span>
-                                                    <input class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="กรอกข้อมูล" />
-                                                </label>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="block text-sm">
-                                                    <span class="text-gray-700 dark:text-gray-400">สินค้าแนะนำ</span>
-                                                    <input class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="กรอกข้อมูล" />
-                                                </label>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="block text-sm">
-                                                    <span class="text-gray-700 dark:text-gray-400">PRODUCT NAME</span>
-                                                    <input class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="กรอกข้อมูล" />
-                                                </label>
+                                                @error('information')
+                                                <span class="font-semibold text-3xl text-red-600 dark:text-red-400">{{ $message }}</span>
+                                                @enderror
                                             </div>
                                             <div class="form-group">
                                                 <label class="block text-sm">
                                                     <span class="text-gray-700 dark:text-gray-400">IMAGE</span>
-                                                    <input class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" type="file" id="file" />
+                                                    <input name="image" class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" type="file" id="file" />
                                                 </label>
+                                                @error('image')
+                                                <span class="font-semibold text-3xl text-red-600 dark:text-red-400">{{ $message }}</span>
+                                                @enderror
                                             </div>
                                             <div class="form-group">
                                                 <label class="block text-sm">
-                                                    <span class="text-gray-700 dark:text-gray-400">PRICE</span>
-                                                    <input class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="กรอกข้อมูล" />
+                                                    <span class="text-gray-700 dark:text-gray-400">PROMOTION</span>
+                                                    <input type="text" name="promotion" id="promotion" class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="กรอกข้อมูล" />
                                                 </label>
+                                                @error('promotion')
+                                                <span class="font-semibold text-3xl text-red-600 dark:text-red-400">{{ $message }}</span>
+                                                @enderror
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="block text-sm">
+                                                    <span class="text-gray-700 dark:text-gray-400">END PROMOTION</span>
+                                                    <input type="text" name="endpromotion" id="endpromotion" class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="กรอกข้อมูล" />
+                                                </label>
+                                                @error('endpromotion')
+                                                <span class="font-semibold text-3xl text-red-600 dark:text-red-400">{{ $message }}</span>
+                                                @enderror
                                             </div>
 
-                                            <div class="form-group">
-                                                <label class="block text-sm">
-                                                    <span class="text-gray-700 dark:text-gray-400">CREATOR</span>
-                                                    <input class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="กรอกข้อมูล" />
-                                                </label>
-                                            </div>
 
                                             <button @click="openModal" class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-red-600 border border-transparent rounded-lg active:bg-red-600 hover:bg-red-700 focus:outline-none focus:shadow-outline-red">
                                                 SUBMIT
@@ -113,11 +108,11 @@
                         <!--Row-->
 
 
-                    </div>
-                    @include('layouts/adminedit/footer')
-
                 </div>
+                @include('layouts/adminedit/footer')
+
         </div>
+    </div>
     </div>
     </div>
     </div>

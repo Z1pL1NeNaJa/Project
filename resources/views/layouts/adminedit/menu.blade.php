@@ -5,7 +5,7 @@
         <div class="py-4 text-gray-500 dark:text-gray-400">
           <a
             class="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200"
-            href="./index.php"
+            href=""
           >
            Thawat Butcher shop
           </a>
@@ -96,7 +96,7 @@
                   <li
                     class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
                   >
-                    <a class="w-full" href="{{route('homepagefrom')}}">หน้า Homepage</a>
+                    <a class="w-full" href="{{route('homepagefrom')}}">หน้า Promotion</a>
                   </li>
                 </ul>
             </li>

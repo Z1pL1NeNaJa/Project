@@ -5,7 +5,7 @@
        <ul>
        <li><a class="nav-link scrollto " href="{{asset('/')}}">หน้าแรก</a></li>
           <li><a class="nav-link scrollto " href="{{route('about')}}">สินค้า</a></li>
-          <a href="{{asset('welcome')}}" class="logo me-auto"><img src="{{asset('admin/assetsfont/img/LOGO thawat.png')}}" alt=""></a>
+          <a href="{{asset('/')}}" class="logo me-auto"><img src="{{asset('admin/assetsfont/img/LOGO thawat.png')}}" alt=""></a>
           <li><a class="nav-link scrollto " href="{{asset('services')}}">เกี่ยวกับ</a></li>
           <li><a class="nav-link scrollto " href="{{asset('contact')}}">ติดต่อ</a></li>
         </ul>
