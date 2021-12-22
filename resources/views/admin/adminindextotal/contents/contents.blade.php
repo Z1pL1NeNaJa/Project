@@ -22,6 +22,7 @@
                 <thead>
                   <tr class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
                     <th class="px-4 py-3">ID</th>
+                    <th class="px-4 py-3">NAME</th>
                     <th class="px-4 py-3">PICTURE</th>
                     <th class="px-4 py-3">DETAILS</th>
                     <th class="px-4 py-3">CREATOR</th>
@@ -45,11 +46,12 @@
                         </div>
                       </div>
                     </td>
+                    <td class="px-4 py-3 text-sm">{{$contentsd->name}}</td>
                     <td class="px-4 py-3 text-sm">
                       <img src="{{asset('admin/images/'.$contentsd->image)}}" alt="" loading="lazy" style="width: 100px;" />
                     </td>
                     <td class="px-4 py-3 text-sm">{{$contentsd->description}}</td>
-                    <td class="px-4 py-3 text-sm">{{ $contentsd->user->name}}</td>
+                    <td class="px-4 py-3 text-sm">{{$contentsd->user->name}}</td>
                     <td>
                       <div class="flex items-center space-x-4 text-sm">
                         <a href="{{url('/contentsfrom/edit/'.$contentsd->contents_id)}}" class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg focus:outline-none focus:shadow-outline-gray" aria-label="Update">

@@ -18,7 +18,15 @@
                         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                             <h6 class="m-0 font-semibold text-gray-700 dark:text-gray-200">แก้ไขข้อมูลหน้า Content</h6>
                         </div>
-
+                        <div class="form-group">
+                            <label class="block text-sm">
+                                <span class="text-gray-700 dark:text-gray-400">NAME</span>
+                                <input name="description" type="name" id="name" class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" value="{{$editcontents->name}}" />
+                            </label>
+                            @error('name')
+                            <span class="dark:text-gray-200">{{$message}}</span>
+                            @enderror
+                        </div>
                         <div class="form-group">
                             <label class="block text-sm">
                                 <span class="text-gray-700 dark:text-gray-400">IMAGE</span>

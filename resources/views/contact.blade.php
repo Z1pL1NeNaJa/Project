@@ -36,7 +36,8 @@
               <div class="info-box mt-4">
                 <i class="bx bx-phone-call"></i>
                 <h3>Call Us</h3>
-                <p>084-906-8199<br>Line ID: @Thawatpoke</p>
+                <p>084-906-8199</p>
+                <p><br></p>
               </div>
             </div>
           </div>
@@ -46,9 +47,9 @@
         <div class="col-lg-6">
           <div class="info-box">
             <h3>QR Code</h3>
-            <img src="" class="img-fluid" alt="">
+            <img src="{{asset('admin/images/qrcode.jpg')}}" width="280px" class="img-fluid" alt="">
+            <p>Line ID: @Thawatpoke</p>
           </div>
-
           </form>
         </div>
 

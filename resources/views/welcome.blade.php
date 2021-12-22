@@ -10,7 +10,7 @@
         <div class="col-xl-6">
           <h1>สั่งซื้อเนื้อหมูที่ ธวัชค้าหมู</h1>
           <h2>สินค้าพร้อมขายทุกวัน ทั้งของสดเเละสินค้าแช่แข็ง</h2>
-          
+
         </div>
       </div>
     </div>
@@ -18,9 +18,9 @@
   </section><!-- End Hero -->
 
   <main id="main">
-    
-<!-- ======= About Section ======= -->
-<section id="about" class="about section-bg">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about section-bg">
       <div class="container" data-aos="fade-up">
 
         <div class="row no-gutters">
@@ -52,7 +52,7 @@
       </div>
     </section><!-- End About Section -->
     <!-- ======= Tabs Section ======= -->
-<section id="tabs" class="tabss">
+    <section id="tabs" class="tabss">
       <div class="container" data-aos="fade-up">
 
         <div class="tab-content">
@@ -61,12 +61,12 @@
               <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
                 <h3>เนื้อหมู</h3>
                 <p>
-                เป็นเนื้อที่มาจากหมู สามารถนำมาทำอาหาร อย่างเช่น รมควัน นำมาทำอย่าง แฮม เบคอน Prosciutto เนื้อหมูถือเป็นเนื้อที่นิยมบริโภคมากที่สุด นอกจากนี้ยังนำมาทำอาหารอย่างเช่น ไส้กรอก เนื้อหมู เป็นต้น
+                  เป็นเนื้อที่มาจากหมู สามารถนำมาทำอาหาร อย่างเช่น รมควัน นำมาทำอย่าง แฮม เบคอน Prosciutto เนื้อหมูถือเป็นเนื้อที่นิยมบริโภคมากที่สุด นอกจากนี้ยังนำมาทำอาหารอย่างเช่น ไส้กรอก เนื้อหมู เป็นต้น
 
                 </p>
                 <h3>ประวัติเนื้อหมู</h3>
                 <p>
-                ชาติแรกที่มีการนำหมูมาเลี้ยงแบบปศุสัตว์คือ ประเทศจีน ซึ่งเริ่มกันมาเกือบ 5,000 ปีก่อน ส่วนในฝั่งยุโรปนั้นมีบันทึกในประเทศอังกฤษว่ามีการเลี้ยงหมูเมื่อ 800 ปีก่อนคริสตกาล ก่อนจะมีการแพร่ไปเขตอเมริกาโดยโคลัมบัส เมื่อถึงช่วง ค.ศ. 1539 (ปีที่พบดินแดนใหม่) ไปสู่รัฐฟอริดา โดยชาวสเปนนำสุกรไปแพร่หลาย
+                  ชาติแรกที่มีการนำหมูมาเลี้ยงแบบปศุสัตว์คือ ประเทศจีน ซึ่งเริ่มกันมาเกือบ 5,000 ปีก่อน ส่วนในฝั่งยุโรปนั้นมีบันทึกในประเทศอังกฤษว่ามีการเลี้ยงหมูเมื่อ 800 ปีก่อนคริสตกาล ก่อนจะมีการแพร่ไปเขตอเมริกาโดยโคลัมบัส เมื่อถึงช่วง ค.ศ. 1539 (ปีที่พบดินแดนใหม่) ไปสู่รัฐฟอริดา โดยชาวสเปนนำสุกรไปแพร่หลาย
 
                 </p>
               </div>
@@ -79,10 +79,10 @@
 
       </div>
     </section><!-- End Tabs Section -->
-    
 
-  <!-- ======= Pricing Section ======= -->
-  <section id="pricing" class="pricing section-bg">
+
+    <!-- ======= Pricing Section ======= -->
+    <section id="pricing" class="pricing section-bg">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -94,35 +94,34 @@
 
           <div class="col-lg-4 col-md-6">
             <div class="box" data-aos="fade-up" data-aos-delay="100">
-              <h3>สามชั้น 10 โล ลด 100 บาท</h3>
-              <a href="assets/img/portfolio/portfolio-2.jpg" ></i></a>
-                <li>ตั้งแต่ วันที่ 24 ถึง 31 สิงหาคม 2564</li>
-              </ul>
-              <div class="btn-wrap">
+              <h3>สันคอหมูเหลือ 135 จาก 150</h3>
+              <img src="{{asset('admin/images/1.png')}}" width="350px" class="img-fluid" alt="">
+              <li><br>ตั้งแต่ วันที่ 21 ถึง 31 มกราคม 2565</li>
+              <!-- <div class="btn-wrap">
                 <a href="#" class="btn-buy">Buy Now</a>
-              </div>
+              </div> -->
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 mt-4 mt-md-0">
             <div class="box " data-aos="fade-up" data-aos-delay="200">
               <h3>เนื้อแดงเหลือ 99 บาท จาก 130 บาท</h3>
-                <li>ตั้งแต่ วัน 24 ถึง 26 สิงหาคม 2564</li>
-              </ul>
-              <div class="btn-wrap">
+              <img src="{{asset('admin/images/2.png')}}" width="350px" class="img-fluid" alt="">
+              <li><br>ตั้งแต่ วันที่ 21 ถึง 31 มกราคม 2565</li>
+              <!-- <div class="btn-wrap">
                 <a href="#" class="btn-buy">Buy Now</a>
-              </div>
+              </div> -->
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
             <div class="box" data-aos="fade-up" data-aos-delay="300">
-              <h3>โปรโมชั่น 199 เลือกได้ 3 อย่าง 3 โล</h3>
-                <li>ตั้งแต่ วัน 26 ถึง 31 สิงหาคม 2564</li>
-              </ul>
-              <div class="btn-wrap">
+              <h3>หมูสามชั้น 10 โล ลด 100 บาท</h3>
+              <img src="{{asset('admin/images/3.png')}}" width="350px" class="img-fluid" alt="">
+              <li><br>ตั้งแต่ วันที่ 21 ถึง 31 มกราคม 2565</li>
+              <!-- <div class="btn-wrap">
                 <a href="#" class="btn-buy">Buy Now</a>
-              </div>
+              </div> -->
             </div>
           </div>
 

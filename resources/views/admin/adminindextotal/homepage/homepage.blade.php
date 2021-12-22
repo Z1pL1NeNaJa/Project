@@ -42,7 +42,7 @@
                           <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
                         </div>
                         <div>
-                          <p class="font-semibold">{{$homepages->homepage_id}}</p>
+                          <p class="font-semibold">{{$homepages->Homepage_id}}</p>
 
                         </div>
                       </div>

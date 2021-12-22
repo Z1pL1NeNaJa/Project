@@ -37,6 +37,7 @@ class contentsController extends Controller
         );
         // dd($request);
         $contents = new Contents();
+        $contents->name = $request->name;
         $contents->description = $request->description;
         $contents->user_id = Auth::user()->id;
         if ($request->hasFile('image')) {
@@ -81,9 +82,11 @@ class contentsController extends Controller
             Image::make(public_path() . '/admin/images/' . $filemane);
             $contents->image = $filemane;
             $contents->description = $request->description;
+            $contents->name = $request->name;
         } else {
             $contents = contents::find($contents_id);
             $contents->description = $request->description;
+            $contents->name = $request->name;
         }
         $contents->save();
         return redirect()->route('contentsfrom');
