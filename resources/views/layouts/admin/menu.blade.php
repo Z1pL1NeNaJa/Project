@@ -28,18 +28,18 @@
           <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
             <a class="w-full" href="{{route('adminfrom')}}">หน้า Admin</a>
           </li>
-          <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
+          <!-- <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
             <a class="w-full" href="{{route('Backgroundfrom')}}"> หน้า Background</a>
-          </li>
+          </li> -->
           <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
             <a class="w-full" href="{{route('TypeProductfrom')}}">หน้า Typeproduct</a>
           </li>
           <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
             <a class="w-full" href="{{route('productfrom')}}">หน้า Product</a>
           </li>
-          <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
+          <!-- <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
             <a class="w-full" href="{{route('contentsfrom')}}">หน้า Contents</a>
-          </li>
+          </li> -->
           <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
             <a class="w-full" href="{{route('homepagefrom')}}">หน้า Promotion</a>
           </li>

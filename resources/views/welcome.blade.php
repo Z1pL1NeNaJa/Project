@@ -91,39 +91,19 @@
         </div>
 
         <div class="row">
-
+          @foreach ($Homepages as $Homepagep)
           <div class="col-lg-4 col-md-6">
             <div class="box" data-aos="fade-up" data-aos-delay="100">
-              <h3>สันคอหมูเหลือ 135 จาก 150</h3>
-              <img src="{{asset('admin/images/1.png')}}" width="350px" class="img-fluid" alt="">
-              <li><br>ตั้งแต่ วันที่ 21 ถึง 31 มกราคม 2565</li>
+              <h3>{{ $Homepagep->information }}</h3>
+              <img src="{{ asset('admin/images/' . $Homepagep->image) }}" width="350px" class="img-fluid" alt="">
+              <li><br>{{ $Homepagep->endpromotion }}</li>
               <!-- <div class="btn-wrap">
                 <a href="#" class="btn-buy">Buy Now</a>
               </div> -->
             </div>
           </div>
+          @endforeach
 
-          <div class="col-lg-4 col-md-6 mt-4 mt-md-0">
-            <div class="box " data-aos="fade-up" data-aos-delay="200">
-              <h3>เนื้อแดงเหลือ 99 บาท จาก 130 บาท</h3>
-              <img src="{{asset('admin/images/2.png')}}" width="350px" class="img-fluid" alt="">
-              <li><br>ตั้งแต่ วันที่ 21 ถึง 31 มกราคม 2565</li>
-              <!-- <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div> -->
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
-            <div class="box" data-aos="fade-up" data-aos-delay="300">
-              <h3>หมูสามชั้น 10 โล ลด 100 บาท</h3>
-              <img src="{{asset('admin/images/3.png')}}" width="350px" class="img-fluid" alt="">
-              <li><br>ตั้งแต่ วันที่ 21 ถึง 31 มกราคม 2565</li>
-              <!-- <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div> -->
-            </div>
-          </div>
 
         </div>
 

@@ -50,7 +50,7 @@
                     <td class="px-4 py-3 text-sm">
                       <img src="{{asset('admin/images/'.$contentsd->image)}}" alt="" loading="lazy" style="width: 100px;" />
                     </td>
-                    <td class="px-4 py-3 text-sm">{{$contentsd->description}}</td>
+                    <td class="px-4 py-3 text-sm">{{Str::limit($contentsd->description,55)}}</td>
                     <td class="px-4 py-3 text-sm">{{$contentsd->user->name}}</td>
                     <td>
                       <div class="flex items-center space-x-4 text-sm">
